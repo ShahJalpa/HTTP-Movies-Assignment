@@ -39,7 +39,7 @@ const UpdateMovieForm = ((props) => {
         axios
            .put(`http://localhost:5000/api/movies/${id}`, movieItem)
            .then(response => {
-               props.setMovieItem(response.data);
+               setMovieItem(response.data);
                push('/');
            })
            .catch(error => {
